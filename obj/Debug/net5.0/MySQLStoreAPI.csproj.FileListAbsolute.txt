@@ -1,0 +1,7 @@
+C:\Users\pothe\Desktop\DotnetCore5WebAPIAngular\MySQLStoreAPI\obj\Debug\net5.0\MySQLStoreAPI.csproj.AssemblyReference.cache
+C:\Users\pothe\Desktop\DotnetCore5WebAPIAngular\MySQLStoreAPI\obj\Debug\net5.0\MySQLStoreAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pothe\Desktop\DotnetCore5WebAPIAngular\MySQLStoreAPI\obj\Debug\net5.0\MySQLStoreAPI.AssemblyInfoInputs.cache
+C:\Users\pothe\Desktop\DotnetCore5WebAPIAngular\MySQLStoreAPI\obj\Debug\net5.0\MySQLStoreAPI.AssemblyInfo.cs
+C:\Users\pothe\Desktop\DotnetCore5WebAPIAngular\MySQLStoreAPI\obj\Debug\net5.0\MySQLStoreAPI.csproj.CoreCompileInputs.cache
+C:\Users\pothe\Desktop\DotnetCore5WebAPIAngular\MySQLStoreAPI\obj\Debug\net5.0\MySQLStoreAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pothe\Desktop\DotnetCore5WebAPIAngular\MySQLStoreAPI\obj\Debug\net5.0\MySQLStoreAPI.MvcApplicationPartsAssemblyInfo.cache
