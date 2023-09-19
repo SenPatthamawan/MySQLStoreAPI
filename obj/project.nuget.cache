@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0tOS1akImBLGHSzHJ+cwQBvmw0iO4SH3JDci3u0K4S0aHaTTjVarpPJ+lz4OJGvhtEkh+b3Cb/flixiVQWQomg==",
+  "dgSpecHash": "pIbWsUEqVEqmx71y2jsvNGDCoVK8pyxvEwNGZWJDgvIOsyeLVjh4hr9rIIfhobqZsy/FhQ0q7reA7MWzFmzdYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pothe\\Desktop\\DotnetCore5WebAPIAngular\\MySQLStoreAPI\\MySQLStoreAPI.csproj",
+  "projectFilePath": "C:\\Users\\pothe\\Desktop\\GitProjects\\MySQLStoreAPI\\MySQLStoreAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pothe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pothe\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.12\\microsoft.aspnetcore.authentication.jwtbearer.5.0.12.nupkg.sha512",

@@ -1456,11 +1456,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pothe\\Desktop\\DotnetCore5WebAPIAngular\\MySQLStoreAPI\\MySQLStoreAPI.csproj",
+      "projectUniqueName": "C:\\Users\\pothe\\Desktop\\GitProjects\\MySQLStoreAPI\\MySQLStoreAPI.csproj",
       "projectName": "MySQLStoreAPI",
-      "projectPath": "C:\\Users\\pothe\\Desktop\\DotnetCore5WebAPIAngular\\MySQLStoreAPI\\MySQLStoreAPI.csproj",
+      "projectPath": "C:\\Users\\pothe\\Desktop\\GitProjects\\MySQLStoreAPI\\MySQLStoreAPI.csproj",
       "packagesPath": "C:\\Users\\pothe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pothe\\Desktop\\DotnetCore5WebAPIAngular\\MySQLStoreAPI\\obj\\",
+      "outputPath": "C:\\Users\\pothe\\Desktop\\GitProjects\\MySQLStoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pothe\\AppData\\Roaming\\NuGet\\NuGet.Config"

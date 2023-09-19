@@ -1,7 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace MySQLStoreAPI.Models
 {
@@ -44,5 +44,6 @@ namespace MySQLStoreAPI.Models
         public string CategoryName { get; set; }
 
         public virtual Category CategoryInfo { get; set; }
+
     }
 }
