@@ -30,9 +30,56 @@ namespace MySQLStoreAPI
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MySQLStoreAPI", Version = "v1" });
-            });
+                //c.SwaggerDoc("v1", new OpenApiInfo { Title = "MySQLStoreAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "MySQL Store API",
+                    Version = "v1",
+                    Description = "An API to perform Store operations",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Patthamawan Chanthep",
+                        Email = "sen.patthamawan@gmail.com",
+                        Url = new Uri("https://github.com/SenPatthamawan"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Store API LICX",
+                        Url = new Uri("https://example.com/license"),
+                    }
+                });
 
+                //เรียกใช้ Authentication------------------------------------
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme." + "\r\n\r\n" +
+                    "Enter 'Bearer' [space] and then your token in the text input below." +
+                    "\r\n\r\n Example: \"Bearer 12345abcdef\"",
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[]{}
+                    }
+
+                });
+            });
+            //-----------------------------------------------------------------------------------
             // เรียกใช้ ApplicationDbContext -------------------------------------------------------
             //AddDbContextPool จะ connect database ให้ตลอด ไม่ต้องมา connect ใหม่เหมือน AddDbContext
             services.AddDbContextPool<ApplicationDbContext>(options =>
@@ -84,8 +131,24 @@ namespace MySQLStoreAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MySQLStoreAPI v1"));
+                // app.UseSwagger();
+                // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MySQLStoreAPI v1"));
+                
+                //ให้ Swagger อ้างอิง Path มาที่ docs ของเรา มันจะมาหาเอง
+                app.UseSwagger(c =>
+                {
+                    c.RouteTemplate = "docs/{documentName}/docs.json";
+                });
+
+                //Custom UI
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/docs/v1/docs.json", "MySQLStoreAPI v1");
+                    c.RoutePrefix = "docs";
+                    c.DocumentTitle = "MySQL Store API";
+                    c.InjectStylesheet("/docs-ui/custom.css");
+                    c.InjectJavascript("/docs-ui/custom.js");
+                });
             }
 
             app.UseHttpsRedirection();
